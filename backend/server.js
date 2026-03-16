@@ -43,6 +43,11 @@ function authenticateToken(req, res, next) {
 
 
 
+// generated-by-copilot: Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ message: 'Book Favorites API is running' });
+});
+
 // Use central API router
 const createApiRouter = require('./routes');
 app.use('/api', createApiRouter({
